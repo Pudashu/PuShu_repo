@@ -47,50 +47,46 @@
         </a>
       </h1>
     </div>
-    <nav class="main-nav hide-on-mobiles">
+    <nav class="main-nav hide-on-mobiles">                                 
       <ul>
   <li><a href="History.html" target="_blank"> <abbr title="History and Achievement">History</abbr> </a></li>
-  <li class="current"><a href="Why.html" target="_blank"><abbr title="The usage of Linux">Usage</abbr></a></li>
-  <li><a href="Webs/Shells.html"><abbr title="Several Shells!" target="_blank">Shells</abbr></li>
+  <li><a href="Why.html" target="_blank"><abbr title="The usage of Linux">Usage</abbr></a></li>
+  <li class="current"><a href="Shells.html" target="_blank"><abbr title="Several Shells!" target="_blank">Shells</abbr></li>
   <li><a href="Anecdote.html" target="_blank"><abbr title="Sth really interesting!">Anecdote</abbr></a></li>
   </ul>
 </nav>
     
     
   </div>
-  <nav class="mobile-nav show-on-mobiles">
-    <ul>
-  <li><a href="http://jekyllrb.com/">Home</a></li>
-    <li><a href="http://jekyllrb.com/docs/">Docs</a></li>
-    <li class="current"><a href="http://jekyllrb.com/resources/">Resources</a></li>
-    <li><a href="http://jekyllrb.com/news/">News</a></li>
-    <li><a href="https://github.com/jekyll/jekyll">GitHub</a></li>
-</ul>
-</nav>
+  
 </header>
 <section class="standalone">
   <div class="grid">
     <div class="unit whole">
       <article>
-        <div class="improve right hide-on-mobiles">
-          <a data-proofer-ignore="" href="https://github.com/jekyll/jekyll/edit/master/docs/pages/resources.md"><i class="fa fa-pencil"></i> &nbsp;Improve this page</a>
-        </div>
-        <h1>Usage</h1>
-        <p>Now I'm trying to tell you how to set up a Linux on your Personal computer</p>
+        <h1>Shells</h1>
+<p><em>The Bridge Between Users and Linux</em> (There are a lot of shells, but in this page we focus on bash),To learn this ,you have to know the commands on Linux terminal</p>
 
-<h2 id="instructions">Subsystem on windows<a class="header-link" href="https://learn.microsoft.com/en-us/windows/wsl/install" title="Permalink"><span class="sr-only">Permalink</span><em class="fa fa-link"></em></a></h2>
+<h2 id="instructions">Shell Script<a class="header-link" href="https://learn.microsoft.com/en-us/windows/wsl/install" title="Permalink"><span class="sr-only">Permalink</span></a></h2>
 
 <ol>
-  <li>You can<a href="https://ubuntu.com/wsl/"> now experience</a> Ubuntu system on Windows!</li>
-  <li>Set a link between wsl and your windows files.
-    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ln <span class="nb">-s </span>/mnt/c/...
+  <li>First Line(Shebang): In this line we use #！ and add the path of interpreter after it.
+	<p>Such as </p><div class="highlight"><pre class="highlight"><code>#! <span class="nb">/bin/bash</span>
+</code></pre></div></li>
+	
+<li>Type your code to the following line
+  <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#! /bin/bash <span class="nb">
+echo "Hello World!"</span>
 </code></pre></div>    </div>
   </li>
-<li>Maybe learn to use git<code class="language-plaintext highlighter-rouge">sudo apt-get install git</code>(On ubuntu).
-    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init
-git pull/push
-...
-</code></pre></div>    </div>
+<li>To launch the bash script
+	<ol><li>launch as a *.sh<code class="language-plaintext highlighter-rouge"></code>(On the terminal).
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chmod +x *.sh
+./*.sh</code></pre></li>
+  
+<li>As a parameter<code class="language-plaintext highlighter-rouge"></code>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/sh test.sh
+/bin/php test.php</li>
   </li>
 <li>Recommend "菜鸟教程",to learn more Linux terminal command.</li>
 </div>
@@ -98,6 +94,17 @@ git pull/push
   
 
 <h2 id="instructions">A real Linux<a class="header-link" href="https://learn.microsoft.com/en-us/windows/wsl/install" title="Permalink"><span class="sr-only">Permalink</span><em class="fa fa-link"></em></a></h2>
+<ol>
+		<li><em>Get a USB for system</em></li>
+		<p> Empty and pack up the data before format your usb for Linux system.<br><a href="https://mirrors.tuna.tsinghua.edu.cn/">Download</a> the mirror of the Release version<br>Use Ultra ISO to open and burn it on your USB</p>
+		<li>Create a disk partition for the new system(which will disappear on your windows file manage tool)</li>
+	<p>Please find help on the Internet</p>
+		<li>Set your Computer to open by usb driver</li>
+	<p>Make sure your usb is Plugged in your laptop<br>Restart your computer and open the BIOS<br>Set your USB driver to be opened at first<br>Restart</p>
+		<li>Distribute the disk space(Make sure you choose the zone you set up in step 2)</li>
+	<p>Follow the instruction and allocate the space by yourself.<br> Personally, there are only '/' '/home' '/boot' 'swap',four contents need to be initialized<hr><iframe src="//player.bilibili.com/player.html?aid=508861771&bvid=BV1ju41197w1&cid=500623781&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="600" height="600" align="left" title="Still feel confused?Watch this!"> </iframe></p>
+		</ol>
+		
 <script>
   var anchorForId = function (id) {
     var anchor = document.createElement("a");
